@@ -19,3 +19,12 @@ button{
   outline: none;
   border: none;
 }
+
+h2{
+  text-align: center;
+}
+
+table tr {
+  text-align: center;
+  font-size: 1.4rem;
+}

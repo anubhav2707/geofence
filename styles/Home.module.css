@@ -31,3 +31,13 @@
   font-size: 1.4rem;
   color: #666;
 }
+
+.redText{
+  display: block;
+  margin-top: 4rem;
+  color: #d9315e;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
