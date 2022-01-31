@@ -5,16 +5,16 @@ import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID
+  apiKey: "AIzaSyCooO84dB19lU76DUIrSQkG7l7KMcdjISw",
+  authDomain: "geofence-d8038.firebaseapp.com",
+  projectId: "geofence-d8038",
+  storageBucket: "geofence-d8038.appspot.com",
+  messagingSenderId: "787550389859",
+  appId: "1:787550389859:web:642077dc8b010e117c5a56",
+  measurementId: "G-NSC9N4138K"
 };
 
-console.log(process.env.API_KEY)
+// console.log(firebase)
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
