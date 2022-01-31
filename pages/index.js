@@ -2,9 +2,13 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { geolocated } from "react-geolocated";
 import { useAuth } from "../libs/auth";
+import { editLocation } from '../libs/db';
+import { useState } from 'react';
 
 const Home = (props) => {
   const auth = useAuth();
+  const [msgg, setMsg] = useState(false);
+
   return !props.isGeolocationEnabled ? (
     <div className={styles.container}>
       <Head>
@@ -45,9 +49,18 @@ const Home = (props) => {
         }
         </div>
           {auth.user && 
-        <p className='user-info'>
-          Signed in as {auth.user.email}
-        </p>
+        <>
+          <p className='user-info'>
+            Signed in as {auth.user.email}
+          </p>
+          
+          <button className='save-btn' onClick={e=>{
+            editLocation(auth.user.uid, props.coords?.latitude, props.coords?.longitude )
+            setMsg(true);
+            }}>Save Location</button>
+            {msgg && <span className='success-text'>
+            Location updated successfully!</span>}
+          </>
           }
         <table>
                 <tbody>
@@ -61,6 +74,8 @@ const Home = (props) => {
                     </tr>
                 </tbody>
             </table>
+
+        
 
       </main>
 

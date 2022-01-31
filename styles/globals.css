@@ -39,3 +39,19 @@ table{
   font-weight: 600;
   color: #363636;
 }
+
+.save-btn{
+  font-size: 1.2rem;
+  color: cornflowerblue;
+  background-color: #eef;
+  font-weight: 700;
+}
+
+.success-text{
+  color: green;
+  font-weight: 1rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.8;
+  cursor: default;
+}
