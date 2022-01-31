@@ -57,11 +57,11 @@ table{
 }
 
 .avatar-wrapper{
-  height: 25vw;
-  width: 25vw;
+  height: 100px;
+  width: 100px;
   background: red;
   border-radius: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
 }
