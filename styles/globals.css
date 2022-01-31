@@ -30,13 +30,13 @@ table tr {
 }
 
 table{
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .user-info{
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #363636;
 }
 
@@ -54,4 +54,14 @@ table{
   text-align: center;
   opacity: 0.8;
   cursor: default;
+}
+
+.avatar-wrapper{
+  height: 25vw;
+  width: 25vw;
+  background: red;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

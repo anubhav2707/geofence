@@ -37,19 +37,21 @@ const Home = (props) => {
       </Head>
 
       <main className={styles.main}>
-        <h2>Please Sign in to access your saved locations.</h2>
+        {  !auth.user &&
+          <h2>Please Sign in to access your saved locations.</h2>
+        }
         <div className='btn-container'>
         {
           !auth.user &&
         <button onClick={(e) => auth.signinwithGoogle()}>Sign In with Google</button>
         }
-        {
-          auth.user &&
-        <button onClick={(e) => auth.signout()}>Sign Out</button>
-        }
+        
         </div>
           {auth.user && 
         <>
+        <div className='avatar-wrapper' style={{background:`url("${auth.user.photoUrl}")`}}>
+
+        </div>
           <p className='user-info'>
             Signed in as {auth.user.email}
           </p>
@@ -74,6 +76,10 @@ const Home = (props) => {
                     </tr>
                 </tbody>
             </table>
+          {
+          auth.user &&
+        <button onClick={(e) => auth.signout()}>Sign Out</button>
+        }
 
         
 
