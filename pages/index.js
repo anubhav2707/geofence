@@ -30,8 +30,6 @@ const Home = (props) => {
         <title>GeoFence</title>
       </Head>
 
-      {console.log(props)}
-
       <main className={styles.main}>
         <h2>Location access granted!</h2>
         <table>
