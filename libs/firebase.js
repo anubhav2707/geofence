@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: process.env.MEASUREMENT_ID
 };
 
-// console.log(process.env.API_KEY)
+console.log(process.env.API_KEY)
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
