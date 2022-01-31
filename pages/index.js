@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { geolocated } from "react-geolocated";
+import { useAuth } from "../libs/auth";
 
 const Home = (props) => {
+  const auth = useAuth();
   return !props.isGeolocationEnabled ? (
     <div className={styles.container}>
       <Head>
@@ -31,7 +33,22 @@ const Home = (props) => {
       </Head>
 
       <main className={styles.main}>
-        <h2>Location access granted!</h2>
+        <h2>Please Sign in to access your saved locations.</h2>
+        <div className='btn-container'>
+        {
+          !auth.user &&
+        <button onClick={(e) => auth.signinwithGoogle()}>Sign In with Google</button>
+        }
+        {
+          auth.user &&
+        <button onClick={(e) => auth.signout()}>Sign Out</button>
+        }
+        </div>
+          {auth.user && 
+        <p className='user-info'>
+          Signed in as {auth.user.email}
+        </p>
+          }
         <table>
                 <tbody>
                     <tr>

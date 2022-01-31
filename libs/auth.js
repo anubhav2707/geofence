@@ -73,7 +73,6 @@ function useProvideAuth() {
 
   return {
     user,
-    signinwithGithub,
     signinwithGoogle,
     signout,
   };
